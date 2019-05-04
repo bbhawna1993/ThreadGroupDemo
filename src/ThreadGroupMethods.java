@@ -26,8 +26,7 @@ public class ThreadGroupMethods {
 		Thread t5=new Thread(g1,"thread-5");
 
 		System.out.println(g.activeGroupCount());
-		System.out.println(g.activeGroupCount());
-
+		
 
 	}
 }
