@@ -15,6 +15,7 @@ public class ThreadGroupMethods {
 		the priority of newly added threads will change and previous
 		thread's priority will remain as it was.
 		 */
+
 		Thread t3=new Thread(g,"thread-3");
 		System.out.println(t3.getPriority());//3
 		System.out.println(t1.getPriority());//5
@@ -26,7 +27,9 @@ public class ThreadGroupMethods {
 		Thread t5=new Thread(g1,"thread-5");
 
 		System.out.println(g.activeGroupCount());
-		
+		g.list();
+
+
 
 	}
 }
