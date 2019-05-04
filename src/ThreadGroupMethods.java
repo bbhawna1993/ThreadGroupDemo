@@ -1,7 +1,7 @@
 
 public class ThreadGroupMethods {
 
-	public static void main(String[] args)
+	public static void main(String[] args) throws InterruptedException
 	{
 		ThreadGroup g=new ThreadGroup("Parent thread group");
 		//t1 and t2's priority is 5 by default 
@@ -20,7 +20,11 @@ public class ThreadGroupMethods {
 		System.out.println(t3.getPriority());//3
 		System.out.println(t1.getPriority());//5
 		System.out.println(t2.getPriority());//5
+		t1.start();
+		t2.start();
 
+		System.out.println(g.activeCount());
+		Thread.sleep(1000);
 		System.out.println(g.activeCount());
 		ThreadGroup g1=new ThreadGroup(g,"child group");
 		Thread t4=new Thread(g1,"thread-4");
@@ -28,8 +32,5 @@ public class ThreadGroupMethods {
 
 		System.out.println(g.activeGroupCount());
 		g.list();
-
-
-
 	}
 }
