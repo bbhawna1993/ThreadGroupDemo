@@ -19,5 +19,15 @@ public class ThreadGroupMethods {
 		System.out.println(t3.getPriority());//3
 		System.out.println(t1.getPriority());//5
 		System.out.println(t2.getPriority());//5
+
+		System.out.println(g.activeCount());
+		ThreadGroup g1=new ThreadGroup(g,"child group");
+		Thread t4=new Thread(g1,"thread-4");
+		Thread t5=new Thread(g1,"thread-5");
+
+		System.out.println(g.activeGroupCount());
+		System.out.println(g.activeGroupCount());
+
+
 	}
 }
